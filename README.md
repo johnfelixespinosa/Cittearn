@@ -1,24 +1,16 @@
-# README
+# Rails Portfolio Project
+## Cittearn
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  John Espinosa for Learn.co Fullstack Web Development Course
 
-Things you may want to cover:
 
-* Ruby version
+### Install Instructions
 
-* System dependencies
+### Purpose
 
-* Configuration
+### Features
 
-* Database creation
 
-* Database initialization
+### License
+  This project is being created open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
