@@ -1,0 +1,18 @@
+<h1>Cittearn</h1>
+<h2>New Song</h2>
+
+
+<%= form_for @song do |f| %>
+  <%= f.label "Title" %><br>
+    <%= f.text_field :title %><br>
+
+  <%= f.label "Artist" %><br>
+    <%= f.text_field :artist %><br>
+
+  <%= f.label "Key" %><br>
+    <%= f.text_field :key %><br>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+<%= link_to 'home', root_path %>
