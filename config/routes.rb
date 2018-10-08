@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :parts
   root 'static_pages#home'
-  
-  resources :songs
+
+  resources :parts
+  resources :songs do
+    resources :parts
+  end
 
 end

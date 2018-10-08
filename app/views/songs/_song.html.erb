@@ -1,0 +1,7 @@
+<strong><%= @song.title %></strong> by <%= @song.artist %>
+
+<p>Key of: <%= @song.key %></p>
+
+<% @song.parts.each do |part| %>
+<%= part.lyrics %><br><%= part.name %>
+<% end %>
