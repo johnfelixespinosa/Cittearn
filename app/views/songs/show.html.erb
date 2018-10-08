@@ -1,4 +1,4 @@
-<h1><%= @song.title %></h1><br>
-<h2><%= @song.artist %></h2><br>
-<h2><%= @song.key %></h2><br>
+<strong><%= @song.title %></strong> by <%= @song.artist %>
+
+<p>Key of: <%= @song.key %></p>
 <%= link_to "Edit Song", edit_song_path %>

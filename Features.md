@@ -21,7 +21,14 @@ Cittearn is a tool for musicians to share the songs they wish to teach
 When a user creates a song  
   
 the form asks for title/artist/key  
-then the form asks does this song have an intro  
-if yes, it asks for the lyrics of the intro and the chords  
+
+how many parts does this song have? 3
+
+Part 1
+ name this part
+ enter lyrics for this part
+part 2
+
+part 3
 
 
