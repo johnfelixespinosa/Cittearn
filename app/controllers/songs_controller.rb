@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def new 
     @song = Song.new
@@ -12,14 +13,28 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     if @song.save
       # session[:user_id] = @user.id
-      redirect_to song_path(@song)
+      redirect_to @song
     else
       redirect_to root
     end
   end
 
   def show
-    @song = Song.find_by(id: params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @song.update(song_params)
+      redirect_to @song
+    else
+      redirect to edit_song_path
+    end
+  end
+
+  def destroy
+    @song.destroy
   end
 
   private
@@ -30,6 +45,10 @@ class SongsController < ApplicationController
       :artist, 
       :key,
       )
+  end
+
+  def set_song
+    @song = Song.find_by(id: params[:id])
   end
 
 end
