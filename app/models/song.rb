@@ -1,3 +1,4 @@
 class Song < ApplicationRecord
-  has_many :parts
+  validates :artist, presence: true
+  validates :title, presence: true
 end

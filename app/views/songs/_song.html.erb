@@ -1,7 +1,30 @@
-<strong><%= @song.title %></strong> by <%= @song.artist %>
 
-<p>Key of: <%= @song.key %></p>
+<div class="jumbotron text-center">
+  <h1 class="display-4"><%= @song.title %></h1>
+  <h2 class="display-4">by <%= @song.artist %></h2>
+  <div class="form-row">
+    <div class="container-group col-md-3">
+      <h2 class="display-2">Key</h2>
+      <%= @song.key %>
+    </div>
+    <div class="container-group col-md-3">
+      <h2 class="display-2">Tuning</h2>
+      <%= @song.tuning %>
+    </div>
+    <div class="container-group col-md-3">
+      <h2 class="display-2">Difficulty</h2>
+      <%= @song.difficulty %>
+    </div>
+    <div class="container-group col-md-3">
+      <h2 class="display-2">Capo</h2>
+      <%= @song.capo %>
+    </div>
+  <div>
+  
 
-<% @song.parts.each do |part| %>
-<%= part.lyrics %><br><%= part.name %>
-<% end %>
+
+  
+  <hr class="my-4">
+  <p><%= @song.lyrics %></p>
+
+</div>

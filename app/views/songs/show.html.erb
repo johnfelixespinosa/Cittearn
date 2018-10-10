@@ -1,14 +1,5 @@
 <%= render "song" %>
 
-<%= form_for [@song, Part.new]  do |f| %>
-  
-  <%= f.label :lyrics %><br>
-  <%= f.text_area :lyrics %><br>
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %><br>
-
-  <%= f.submit "Add Part" %><br>
-<% end %>
 
 <%= link_to "Edit Song", edit_song_path %>

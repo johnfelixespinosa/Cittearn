@@ -12,8 +12,7 @@ class SongsController < ApplicationController
   def create
     @song = Song.new(song_params)
     if @song.save
-      # session[:user_id] = @user.id
-      redirect_to @song
+      redirect_to song_path(@song)
     else
       redirect_to root
     end
@@ -44,6 +43,10 @@ class SongsController < ApplicationController
       :title, 
       :artist, 
       :key,
+      :tuning,
+      :difficulty,
+      :capo,
+      :lyrics
       )
   end
 
