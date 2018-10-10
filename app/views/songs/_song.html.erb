@@ -1,30 +1,27 @@
-
 <div class="jumbotron text-center">
   <h1 class="display-4"><%= @song.title %></h1>
   <h2 class="display-4">by <%= @song.artist %></h2>
+  
   <div class="form-row">
     <div class="container-group col-md-3">
       <h2 class="display-2">Key</h2>
-      <%= @song.key %>
+      <p><%= @song.key %></p>
     </div>
     <div class="container-group col-md-3">
       <h2 class="display-2">Tuning</h2>
-      <%= @song.tuning %>
+      <p><%= @song.tuning %></p>
     </div>
     <div class="container-group col-md-3">
       <h2 class="display-2">Difficulty</h2>
-      <%= @song.difficulty %>
+      <p><%= @song.difficulty %></p>
     </div>
     <div class="container-group col-md-3">
       <h2 class="display-2">Capo</h2>
-      <%= @song.capo %>
+      <p><%= @song.capo %></p>
     </div>
-  <div>
+  </div>
   
-
-
   
-  <hr class="my-4">
-  <p><%= @song.lyrics %></p>
+  <p class="text-left"><%= simple_format(@song.lyrics) %></p>
 
 </div>
