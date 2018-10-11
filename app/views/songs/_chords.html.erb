@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light" style="background-color: #c0c0c0;">
+  <span class="pull-left">
+  <h3 class="display-4">Chords</h3>
+    <% @song.chords.each do |chord| %>
+      <div class="chord">
+        <strong><%= chord.name %></strong> 
+      </div>
+      <div class="chord">
+        <%= chord.pattern %><br>
+      </div>
+    <% end %>
+  </span>
+</nav>
+
