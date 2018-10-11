@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_181328) do
+ActiveRecord::Schema.define(version: 2018_10_11_183642) do
+
+  create_table "chords", force: :cascade do |t|
+    t.string "name"
+    t.string "pattern"
+    t.integer "song_id"
+  end
 
   create_table "songs", force: :cascade do |t|
     t.text "title"

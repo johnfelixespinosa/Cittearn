@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :songs do
+    resources :chords
+  end
+    
   root 'static_pages#home'
 
-  resources :songs 
+  resources :chords
 
 
 end
