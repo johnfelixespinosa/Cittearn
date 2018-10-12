@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_183642) do
+ActiveRecord::Schema.define(version: 2018_10_12_170938) do
 
   create_table "chords", force: :cascade do |t|
     t.string "name"
     t.string "pattern"
     t.integer "song_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|
@@ -28,6 +35,14 @@ ActiveRecord::Schema.define(version: 2018_10_11_183642) do
     t.string "capo"
     t.string "difficulty"
     t.text "lyrics"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email"
   end
 
 end
