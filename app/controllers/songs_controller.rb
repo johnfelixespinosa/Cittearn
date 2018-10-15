@@ -10,8 +10,8 @@ class SongsController < ApplicationController
   end
 
   def create
-    # raise params.inspect
     @song = Song.new(song_params)
+    @song.user = current_user
     if @song.save
       redirect_to song_path(@song)
     else
@@ -47,12 +47,17 @@ class SongsController < ApplicationController
       :tuning,
       :difficulty,
       :capo,
-      :lyrics
+      :lyrics,
+      :user_id
       )
   end
 
   def set_song
     @song = Song.find_by(id: params[:id])
+  end
+
+  def set_user
+    current_user
   end
 
 end
