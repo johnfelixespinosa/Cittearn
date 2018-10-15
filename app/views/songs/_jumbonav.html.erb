@@ -1,5 +1,9 @@
 <nav class="navbar navbar-light" style="background-color: #c0c0c0;">
 
+<span class="pull-left">Song Created by: 
+    <%= @song.user.name %> 
+</span>
+
 <span class="pull-right">
   <div class="btn btn-warning">
     <%= link_to "Edit Song", edit_song_path, class: "btn" %> 
