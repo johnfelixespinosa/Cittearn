@@ -22,26 +22,26 @@
           <%= link_to "Current Songs", songs_path %>
         </li>
               
-        <% if !logged_in? %>
+        <%# <% if !logged_in? %>
           
-        <li class="nav-item">
+        <%# <li class="nav-item">
           <%= link_to "login", '/login' %>
-        </li>
+        <%# </li>
         <li class="nav-item">
           <%= link_to "signup", '/signup' %>
-        </li>
+        <%# </li> %> 
 
-        <% else %>
+        <%# <% else %> 
 
-        <li class="nav-item">
-          <%= link_to "My Songs", user_path(@current_user) %>
-        </li>
+        <%# <li class="nav-item"> %>
+          <%# <%= link_to "My Songs", user_path(@current_user) %>
+        <%# </li>
         <li class="nav-item">
           <%= link_to "logout", logout_path %>
-        </li>
+        <%# </li> %> 
 
-        <% end %>
-      </ul>  
+        <%# <% end %> 
+      <%# </ul>   %> 
   </nav>
 
   <body>
