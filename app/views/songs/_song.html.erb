@@ -1,16 +1,19 @@
 <div class="jumbotron text-center">
 
-<% if current_user %>
-  <% if song_belongs_to_user? %>
-    <%= render "jumbonav" %>
+  <% if current_user %>
+    <% if song_belongs_to_user? %>
+      <%= render "jumbonav" %>
 
-    <% if !@song.chords.empty?%>
-      <%= render "chords" %>
+      <% if !@song.chords.empty?%>
+        <%= render "chords" %>
+      <% end %>
+
     <% end %>
-
-  <% end %>
   <% end %>
   
+  <span class="pull-left">Song Created by: 
+    <%= link_to @song.user.name, user_path %> 
+  </span>
 
   <h1 class="display-4"><%= @song.title %></h1>
   <h2 class="display-4">by <%= @song.artist %></h2>

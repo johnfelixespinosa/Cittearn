@@ -21,6 +21,7 @@ private
   end
 
   helper_method :logged_in?
+  helper_method :login_user
   helper_method :current_user
   helper_method :song_belongs_to_user?
 
