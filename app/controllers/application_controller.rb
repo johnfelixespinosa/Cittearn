@@ -10,6 +10,12 @@ private
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def login_user
+    unless logged_in?
+      redirect_to login_path
+    end
+  end
+
   def song_belongs_to_user?
     current_user.id == @song.user_id
   end

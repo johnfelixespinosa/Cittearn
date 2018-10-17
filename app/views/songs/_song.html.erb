@@ -1,5 +1,6 @@
 <div class="jumbotron text-center">
 
+<% if current_user %>
   <% if song_belongs_to_user? %>
     <%= render "jumbonav" %>
 
@@ -7,6 +8,7 @@
       <%= render "chords" %>
     <% end %>
 
+  <% end %>
   <% end %>
   
 
