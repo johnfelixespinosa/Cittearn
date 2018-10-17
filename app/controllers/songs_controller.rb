@@ -36,6 +36,10 @@ class SongsController < ApplicationController
 
   def destroy
     @song.destroy
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user), 
+        notice: 'song was successfully destroyed.' }
+      end
   end
 
   private
