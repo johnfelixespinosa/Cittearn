@@ -24,7 +24,8 @@
 
 					<ul class="nav navbar-nav pull-right">
             <% if logged_in? %>
-              <%= link_to 'Logout', logout_path %>
+              <%= link_to 'Logout', logout_path %><br>
+              
             <% else %>
               <%= link_to "Sign Up", signup_path %>
               <%= link_to "Log In", login_path %> 

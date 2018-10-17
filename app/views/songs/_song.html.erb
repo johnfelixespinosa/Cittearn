@@ -1,11 +1,14 @@
 <div class="jumbotron text-center">
 
-  <%= render "jumbonav" %>
+  <% if song_belongs_to_user? %>
+    <%= render "jumbonav" %>
 
-  <% if !@song.chords.empty?%>
-  <%= render "chords" %>
+    <% if !@song.chords.empty?%>
+      <%= render "chords" %>
+    <% end %>
+
   <% end %>
-
+  
 
   <h1 class="display-4"><%= @song.title %></h1>
   <h2 class="display-4">by <%= @song.artist %></h2>
