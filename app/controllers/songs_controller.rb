@@ -7,7 +7,7 @@ class SongsController < ApplicationController
   end
 
   def index
-    @songs = Song.all
+      @songs = Song.all
   end
 
   def create
@@ -24,6 +24,7 @@ class SongsController < ApplicationController
   end
 
   def edit
+    @song = current_user.songs.find_by(id: params[:id])
   end
 
   def update

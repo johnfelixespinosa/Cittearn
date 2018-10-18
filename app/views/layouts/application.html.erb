@@ -22,11 +22,11 @@
 										
             <% if logged_in? %>
 
-            	<li><%= link_to 'New Song', new_song_path %></li>
+            	<li><%= link_to 'New Song', new_user_song_path(current_user) %></li>
               </ul>
 
               <ul class="nav navbar-nav pull-right">
-                <li><%= link_to 'My Songs', user_path(current_user) %></li>  
+                <li><%= link_to 'My Account', user_path(current_user) %></li>  
                 <li><%= link_to 'Logout', logout_path %></li>
               </ul>
               

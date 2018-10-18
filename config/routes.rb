@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
  
+  resources :users do 
+    resources :songs
+  end
+
   resources :songs do
     resources :chords
   end
@@ -7,7 +11,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   resources :chords
-  resources :users
   resources :sessions
 
   get 'signup', to: 'users#new', as: 'signup'
