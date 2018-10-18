@@ -1,6 +1,8 @@
 class ChordsController < ApplicationController
   before_action :set_song
   before_action :set_chord, only: [:show, :edit, :update, :destroy]
+  before_action :verify_user
+
 
   def index 
     @chord = @song.chords.all
@@ -41,5 +43,10 @@ class ChordsController < ApplicationController
   def chord_params
     params.require(:chord).permit(:name, :pattern, :song_id)
   end
+
+  def verify_user
+    redirect_to song_path(@song) if @song.user != current_user
+  end
+
 end
 
