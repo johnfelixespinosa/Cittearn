@@ -3,7 +3,7 @@
 <div>
   <h3 class="text-center" >Your Songs</h3><br>
   <div class="d-flex card-group text-center">  
-    <% @user.songs.each do |song| %>
+    <% current_user.songs.each do |song| %>
   
       <div class="card">
       <%# <img class="card-img-top" src=".../100px200/" alt="Card image cap"> %>

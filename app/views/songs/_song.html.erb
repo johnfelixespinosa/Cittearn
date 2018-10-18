@@ -4,19 +4,18 @@
     <% if song_belongs_to_user? %>
       <%= render "jumbonav" %>
 
-      <% if !@song.chords.empty?%>
+      <% if !@song.chords.empty? %>
         <%= render "chords" %>
       <% end %>
 
     <% end %>
   <% end %>
   
-  <span class="pull-left">Song Created by: 
-    <%= link_to @song.user.name, user_path %> 
-  </span>
-
   <h1 class="display-4"><%= @song.title %></h1>
   <h2 class="display-4">by <%= @song.artist %></h2>
+  <h4 class="display-4">Song Added by: 
+    <%= @song.user.name %> 
+  </h4>
   
   <div class="form-row">
     <div class="container-group col-md-3">

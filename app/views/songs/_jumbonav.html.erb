@@ -3,7 +3,7 @@
 
 <span class="pull-right">
   <div class="btn btn-warning">
-    <%= link_to "Edit Song", edit_song_path, class: "btn" %> 
+    <%= link_to "Edit Song", edit_user_song_path(current_user, @song) %></button>
   </div>
   <div class="btn btn-success">
      <%= link_to "Add Chords", new_song_chord_path(@song), class: "btn" %>

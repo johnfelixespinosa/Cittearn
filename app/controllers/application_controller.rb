@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id])
   end
 
-private
-
   def logged_in?
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
@@ -20,9 +18,14 @@ private
     current_user.id == @song.user_id
   end
 
+  def set_song
+    @song = Song.find_by(id: params[:id])
+  end
+  
+  helper_method :current_user
   helper_method :logged_in?
   helper_method :login_user
-  helper_method :current_user
   helper_method :song_belongs_to_user?
+  helper_method :set_song
 
 end
