@@ -1,3 +1,4 @@
 class Chord < ApplicationRecord
-  belongs_to :song
+  has_many   :song_chords
+  has_many   :songs, through: :song_chords
 end
