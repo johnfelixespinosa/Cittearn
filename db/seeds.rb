@@ -135,3 +135,43 @@ Song.create(
   user_id:    4,
   lyrics:     "For all the times that you rain on my parade\r\nAnd all theclubs you get in using my name\r\nYouthink you broke my heart, oh girl forgoodness sake\r\nYou think I'm crying, on my own well I ain't\r\nAnd I didn't wanna write a song 'cause I didn't want anyone thinking I still care\r\nIdon't but, you still hit my phone up\r\nAnd baby I be movin' on and I thinkyou should be somethin'\r\nI don't wanna hold back, maybe you should know that\r\nMy mama don't like you and she likes everyone\r\nAnd I never like to admit that I was wrong\r\nAnd I've been so caught up in my job, didn't see what's going on\r\nAnd now I know, I'm better sleeping on my own\r\n'Cause ifyou like the way you look that much\r\nOh baby you should go and love yourself\r\nAnd if you think that I'm stillholdin' on to somethin'\r\nYou shouldgo and love yourself\r\nBut when you told me that you hated my friends\r\nThe only problem was with you and not them\r\nAnd every time you told me my opinion was wrong\r\nAnd tried to make me forget where I came from\r\nAnd I didn't wanna write a song cause I didn't want anyone thinking I still care\r\nI don't but, you still hit my phone up\r\nAnd baby I be movin' on and I think you should be somethin'\r\nI don't wanna hold back, maybe you should knowthat\r\nMy mama don't like you and she likes everyone\r\nAnd I never like to admit that I was wrong\r\nAnd I've been so caught up in my job, didn't seewhat's going on\r\nAnd now I know, I'm better sleeping on my own\r\n'Cause if you like the way you look that much\r\nOh baby you should go and love yourself\r\nAnd if you think that I'm still holdin' on to somethin'\r\nYou should go and love yourself\r\nFor all thetimes you made me feel small\r\nI fell in love, now I feel nothin' at all\r\nI never felt so low when I was vulnerable\r\nWas I a fool to let you breakdown my walls?\r\n'Cause if you like the way you look that much\r\nOh baby you should go and love yourself\r\nAndif you think that I'm still holdin' on to somethin'\r\nYou should go and love yourself\r\n'Cause if you like the way you look that much\r\nOh baby you should go and love yourself\r\nAnd if you think that I'm still holdin' on tosomethin'\r\nYou should go and love yourself"
 )
+
+Chord.create(
+  name: "C",
+  img:  "c_chord.png"
+)
+
+Chord.create(
+  name: "D",
+  img:  "d_chord.png"
+)
+
+Chord.create(
+  name: "E",
+  img:  "e_chord.png"
+)
+
+Chord.create(
+  name: "F",
+  img:  "f_chord.png"
+)
+
+Chord.create(
+  name: "G",
+  img:  "g_chord.png"
+)
+
+Chord.create(
+  name: "A",
+  img:  "a_chord.png"
+)
+
+Chord.create(
+  name: "B",
+  img:  "b_chord.png"
+)
+
+Chord.create(
+  name: "C",
+  img:  "c_chord.png"
+)
