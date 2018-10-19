@@ -1,14 +1,14 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   before_action :login_user, except: [:show, :index]
-  before_action :verify_user, :verify_song, only: [:edit, :destroy]
+  before_action :verify_user, :verify_song, only: [:edit, :update, :destroy]
 
   def new 
     @song = Song.new
   end
 
   def index
-      @songs = Song.all
+    @songs = Song.all
   end
 
   def create
@@ -17,7 +17,7 @@ class SongsController < ApplicationController
     if @song.save
       redirect_to song_path(@song)
     else
-      redirect_to root
+      redirect_to root_path
     end
   end
 
@@ -58,10 +58,6 @@ class SongsController < ApplicationController
       :lyrics,
       :user_id
       )
-  end
-
-  def set_song
-    @song = Song.find_by(id: params[:id])
   end
 
   def verify_user
