@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_14_220357) do
+ActiveRecord::Schema.define(version: 2018_10_19_183349) do
+
+  create_table "chord_progressions", force: :cascade do |t|
+    t.integer "song_id"
+    t.integer "chord_id"
+    t.index ["chord_id"], name: "index_chord_progressions_on_chord_id"
+    t.index ["song_id"], name: "index_chord_progressions_on_song_id"
+  end
 
   create_table "chords", force: :cascade do |t|
     t.string "name"
