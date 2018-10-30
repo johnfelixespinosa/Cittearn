@@ -12,6 +12,7 @@ class SongsController < ApplicationController
   end
 
   def create
+    # raise params
     @song = Song.new(song_params)
     @song.user = current_user
     if @song.save
@@ -56,7 +57,9 @@ class SongsController < ApplicationController
       :difficulty,
       :capo,
       :lyrics,
-      :user_id
+      :user_id,
+      chord_ids:[],
+      chords_attributes:[:name, :img]
       )
   end
 

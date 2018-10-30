@@ -1,5 +1,4 @@
 class Progression < ApplicationRecord
-  belongs_to :chord
+  has_many :chords
   belongs_to :song
-  
 end

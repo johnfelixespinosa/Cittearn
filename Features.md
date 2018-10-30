@@ -31,4 +31,12 @@ part 2
 
 part 3
 
+User
+  that has songs
+
+Songs
+  that have progressions
+
+Progressions have many chords
+
 
