@@ -4,10 +4,6 @@
     <% if song_belongs_to_user? %>
       <%= render "jumbonav" %>
 
-      <% if !@song.chords.empty? %>
-        <%= render "chords" %>
-      <% end %>
-
     <% end %>
   <% end %>
   

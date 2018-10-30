@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
- 
-  resources :progressions
   
   resources :users do 
     resources :songs
   end
 
   resources :songs do
-    resources :chords
+    resources :progressions
   end
     
   root 'static_pages#home'

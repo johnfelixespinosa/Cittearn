@@ -1,0 +1,22 @@
+<h2>Which chords are used in this progression?<br></h2>
+  <h1 class="display-4"><%= @song.title %></h1>
+  <h2 class="display-4">by <%= @song.artist %></h2>
+  <h4 class="display-4">Song Added by: 
+    <%= @song.user.name %> 
+  </h4>
+<table class="table table-sm">
+  <tr>
+  <% @chords.each do |c| %>
+
+      <td><%= image_tag("#{c.img}", size: "200x200") %></td>
+      <td>Add</td>
+      
+      
+   
+    
+    
+  <% end %>
+   </tr>
+</table>
+  
+  

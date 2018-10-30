@@ -171,7 +171,3 @@ Chord.create(
   img:  "b_chord.png"
 )
 
-Chord.create(
-  name: "C",
-  img:  "c_chord.png"
-)
