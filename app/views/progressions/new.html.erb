@@ -1,9 +1,10 @@
 <h2>Which chords are used in this progression?<br></h2>
-  <h1 class="display-4"><%= @song.title %></h1>
-  <h2 class="display-4">by <%= @song.artist %></h2>
-  <h4 class="display-4">Song Added by: 
-    <%= @song.user.name %> 
-  </h4>
+
+    <h2><%= current_song.title %> <br>
+    <%= current_song.artist %> <br></h2>
+    <h4 class="display-4">Song Added by: 
+    <%= current_user.name %> <br>
+    </h4>
 <table class="table table-sm">
   <tr>
   <% @chords.each do |c| %>
@@ -18,5 +19,7 @@
   <% end %>
    </tr>
 </table>
+
+
   
   
