@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   before_action :login_user, except: [:show, :index]
-  # before_action :verify_user, :verify_song, only: [:edit, :update, :destroy]
+  before_action :verify_song_user, only: [:edit, :update, :destroy]
 
   def new 
     @song = Song.new
@@ -68,8 +68,8 @@ class SongsController < ApplicationController
       )
   end
 
-  def verify_user
-    redirect_to user_path(current_user) if !User.exists?(params[:user_id]) || current_user != User.find(params[:user_id])
+  def verify_song_user
+    redirect_to user_path(current_user) if @song.user != current_user
   end
 
   def verify_song
