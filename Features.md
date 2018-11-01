@@ -18,25 +18,10 @@ Cittearn is a tool for musicians to share the songs they wish to teach
   outro  
   chords  
   
-When a user creates a song  
-  
-the form asks for title/artist/key  
+ToDo List
 
-how many parts does this song have? 3
-
-Part 1
- name this part
- enter lyrics for this part
-part 2
-
-part 3
-
-User
-  that has songs
-
-Songs
-  that have progressions
-
-Progressions have many chords
-
-
+Facebook Login
+Root Page lists NEW songs, top songs
+Song Comments
+Song Rating 
+Alphabetize Current Songs, add links per letter
