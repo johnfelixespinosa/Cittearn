@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
   resources :users do 
-    resources :songs do
-      resources :progressions
+    resources :songs 
   end
-end
+
+  resources :songs do
+    resources :song_chords
+  end
 
    resources :songs 
   #   resources :progressions

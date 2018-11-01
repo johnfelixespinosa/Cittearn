@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_19_191131) do
+ActiveRecord::Schema.define(version: 2018_11_01_191808) do
 
   create_table "chords", force: :cascade do |t|
     t.string "name"
@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 2018_10_19_191131) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "progressions", force: :cascade do |t|
+  create_table "song_chords", force: :cascade do |t|
     t.integer "song_id"
     t.integer "chord_id"
-    t.index ["chord_id"], name: "index_progressions_on_chord_id"
-    t.index ["song_id"], name: "index_progressions_on_song_id"
+    t.index ["chord_id"], name: "index_song_chords_on_chord_id"
+    t.index ["song_id"], name: "index_song_chords_on_song_id"
   end
 
   create_table "songs", force: :cascade do |t|

@@ -36,6 +36,19 @@
     </div>
   </div>
 
+  <div class="form-group col-lg-8">
+    <div class="form-group">
+    <%= f.label :chords, "Chords Used" %><br>
+    <%= hidden_field_tag "song[chord_ids][]", nil %>
+    <% @chords.each do |chord|%>
+        <%= check_box_tag "song[chord_ids][]", chord.id, @song.chord_ids.include?(chord.id)%>
+        <%= image_tag("#{chord.img}", size: "200x200") %>
+    <% end %>
+    <br>
+
+
+
+
   <div class="form row">
     <div class="col-sm-10">
       <%= f.submit 'Submit', class: 'btn-primary btn-lg'  %>

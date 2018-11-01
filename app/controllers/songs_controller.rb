@@ -1,10 +1,12 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   before_action :login_user, except: [:show, :index]
-  before_action :verify_user, :verify_song, only: [:edit, :update, :destroy]
+  # before_action :verify_user, :verify_song, only: [:edit, :update, :destroy]
 
   def new 
     @song = Song.new
+    @chords = Chord.all
+    @progression = @song.song_chords.build
   end
 
   def index
@@ -27,12 +29,15 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @song = current_user.songs.find_by(id: params[:id])
+    @chords = Chord.all
   end
 
   def update
+    # raise params.inspect
     if @song.update(song_params)
-      redirect_to @song
+      redirect_to song_path(@song)
+    elsif @song.song_chords.update
+      redirect_to song_path(@song)
     else
       redirect to edit_song_path
     end

@@ -1,4 +1,5 @@
 class Chord < ApplicationRecord
-  has_many   :progressions
-  has_many   :songs, through: :progressions
+  has_many    :song_chords
+  has_many    :songs, through: :song_chords
 end
+

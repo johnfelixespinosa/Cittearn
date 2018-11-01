@@ -1,12 +1,17 @@
 <nav class="navbar navbar-light" style="background-color: #c0c0c0;">
-
-
-<span class="pull-right">
-  <div class="btn btn-warning">
-    <%= link_to "Edit Song", edit_user_song_path(current_user, @song) %></button>
-  </div>
-  <div class="btn btn-success">
-     <%= link_to "Add Progression", new_user_song_progression_path(current_user, @song), class: "btn" %>
-  </div>
-</span>
+  <span class="pull-right">
+    <div class="btn btn-warning">
+      <%= link_to "Edit Song", edit_user_song_path(current_user, @song) %>
+    </div>
+  </span>
 </nav>
+<% if @song.chords != nil %>
+<nav class="navbar navbar-light" style="background-color: #c0c0c0;">
+  <h2> Chord Progression </h2>
+  <span class="center">
+    <% @song.chords.all.each do |chord| %>
+      <%= image_tag("#{chord.img}", size: "200x200") %>
+<% end %>
+  </span>
+  </nav>
+<% end %>
