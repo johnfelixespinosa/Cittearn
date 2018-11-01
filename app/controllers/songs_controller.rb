@@ -6,7 +6,6 @@ class SongsController < ApplicationController
   def new 
     @song = Song.new
     @chords = Chord.all
-    @progression = @song.song_chords.build
   end
 
   def index
