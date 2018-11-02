@@ -3,7 +3,6 @@ class ChordsController < ApplicationController
   before_action :set_chord, only: [:show, :edit, :update, :destroy]
   before_action :verify_user
 
-
   def index 
     @chord = @song.chords.all
   end
@@ -49,4 +48,3 @@ class ChordsController < ApplicationController
   end
 
 end
-

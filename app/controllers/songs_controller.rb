@@ -75,5 +75,4 @@ class SongsController < ApplicationController
     redirect_to user_path(current_user) if @song.user != current_user
   end
 
-
 end
